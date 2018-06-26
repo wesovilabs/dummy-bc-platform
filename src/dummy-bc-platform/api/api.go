@@ -15,8 +15,10 @@ func CreateRouter() *chi.Mux {
 	r.Use(middleware.Recoverer)
 	r.Use(middleware.Timeout(60 * time.Second))
 	r.Route("/", func(r chi.Router) {
-		r.Post("/", createBC)
 		r.Get("/", getBC)
+		r.Route("/blocks", func(r chi.Router) {
+			r.Post("/", createBC)
+		})
 	})
 	return r
 }
