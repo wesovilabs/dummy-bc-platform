@@ -1,0 +1,18 @@
+hash: 23584b92dfba7a800a85c85765cb49e54485cc9a69a1f926326288584a9122ad
+updated: 2018-06-26T22:47:35.038957+02:00
+imports:
+- name: github.com/alecthomas/gometalinter
+  version: a0a6cc517e763fe2cfe7618b819ec02fc11651f3
+- name: github.com/golang/lint
+  version: 1fb4e4796c08a9a18d8796a6aed584bf4b346bc9
+  subpackages:
+  - golint
+- name: github.com/tebeka/go2xunit
+  version: b1260ed1eacd4ec0a4393c35aa2d6cd52362f71e
+- name: golang.org/x/lint
+  version: 1fb4e4796c08a9a18d8796a6aed584bf4b346bc9
+- name: golang.org/x/tools
+  version: c1def519f03ddf76f16b3e444ee1095d73afa01b
+  subpackages:
+  - go/gcexportdata
+testImports: []

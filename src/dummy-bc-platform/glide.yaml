@@ -1,0 +1,8 @@
+package: .
+import:
+- package: github.com/go-chi/chi
+  version: master
+- package: github.com/davecgh/go-spew/spew
+  version: master
+- package: github.com/joho/godotenv
+  version: master
