@@ -1,11 +1,11 @@
 package api
 
 import (
-	"net/http"
+	"dummy-bc-platform/blocks"
+	"dummy-bc-platform/database"
 	"encoding/json"
 	"github.com/davecgh/go-spew/spew"
-	"dummy-bc-platform/database"
-	"dummy-bc-platform/blocks"
+	"net/http"
 )
 
 func createBC(w http.ResponseWriter, r *http.Request) {

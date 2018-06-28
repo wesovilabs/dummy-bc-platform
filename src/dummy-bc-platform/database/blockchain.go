@@ -1,6 +1,10 @@
 package database
 
-import "dummy-bc-platform/blocks"
+import (
+	"dummy-bc-platform/blocks"
+	"fmt"
+	"github.com/davecgh/go-spew/spew"
+)
 
 // blockchain global variable
 var blockchain *blocks.BC
@@ -19,9 +23,20 @@ func GetBlockchain() *blocks.BC {
 // AddBlock adds a new block into the chain
 func AddBlock(block *blocks.Block) {
 	if blockchain != nil {
+		fmt.Println("Bc is not nil")
 		newBlockchain := append(*blockchain, block)
 		blockchain = &newBlockchain
-		return
+	} else {
+		fmt.Println("Bc is  nil")
+		blockchain = &blocks.BC{block}
 	}
-	blockchain = &blocks.BC{block}
+	spew.Dump(blockchain)
+}
+
+// UpdateBlockchain updates the chain
+func UpdateBlockchain(bc *blocks.BC) {
+	if len(*bc) > len(*blockchain) {
+		blockchain = bc
+	}
+
 }

@@ -1,8 +1,8 @@
 package api
 
 import (
-	"net/http"
 	"encoding/json"
+	"net/http"
 )
 
 func respondWithJSON(w http.ResponseWriter, r *http.Request, code int, payload interface{}) {

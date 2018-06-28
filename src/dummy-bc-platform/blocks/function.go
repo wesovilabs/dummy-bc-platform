@@ -1,13 +1,14 @@
 package blocks
 
 import (
-	"time"
 	"crypto/sha256"
 	"encoding/hex"
+	"time"
 )
 
+// NewBlock create new instance of block
 func (block *Block) NewBlock(BPM int) (*Block, error) {
-	var newBlock *Block
+	newBlock := &Block{}
 	newBlock.Index = block.Index + 1
 	newBlock.Timestamp = time.Now()
 	newBlock.BPM = BPM

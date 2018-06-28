@@ -4,6 +4,7 @@ import (
 	"time"
 )
 
+// Block structure for any block in the chain
 type Block struct {
 	// Index position of the data record in the blockchain
 	Index int `json:"index"`
@@ -17,7 +18,5 @@ type Block struct {
 	PreviousHash string `json:"previous_hash"`
 }
 
-// BlockChain Array of blocks
+// BC Array of blocks
 type BC []*Block
-
-

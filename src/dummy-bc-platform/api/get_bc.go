@@ -1,10 +1,10 @@
 package api
 
 import (
-	"net/http"
+	"dummy-bc-platform/database"
 	"encoding/json"
 	"io"
-	"dummy-bc-platform/database"
+	"net/http"
 )
 
 func getBC(w http.ResponseWriter, r *http.Request) {
